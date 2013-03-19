@@ -25,7 +25,7 @@ no_index:
 provides:
   Dist::Zilla::Plugin::Prereqs::FromCPANfile:
     file: lib/Dist/Zilla/Plugin/Prereqs/FromCPANfile.pm
-    version: 0.01
+    version: 0.02
 requires:
   Dist::Zilla: 4
   Module::CPANfile: 0.901
@@ -35,4 +35,4 @@ resources:
   homepage: https://github.com/miyagawa/Dist-Zilla-Plugin-Prereqs-FromCPANfile
   license: http://dev.perl.org/licenses/
   repository: git://github.com/miyagawa/Dist-Zilla-Plugin-Prereqs-FromCPANfile.git
-version: 0.01
+version: 0.02
