@@ -14,11 +14,12 @@ meta-spec:
   version: 1.4
 name: Dist-Zilla-Plugin-Prereqs-FromCPANfile
 requires:
-  Dist::Zilla: 4
+  Dist::Zilla: 4.200002
   Module::CPANfile: 0.901
   Try::Tiny: 0.1
+  perl: 5.008001
 resources:
   bugtracker: https://github.com/miyagawa/Dist-Zilla-Plugin-Prereqs-FromCPANfile/issues
   homepage: https://github.com/miyagawa/Dist-Zilla-Plugin-Prereqs-FromCPANfile
   repository: https://github.com/miyagawa/Dist-Zilla-Plugin-Prereqs-FromCPANfile.git
-version: 0.03
+version: 0.04
