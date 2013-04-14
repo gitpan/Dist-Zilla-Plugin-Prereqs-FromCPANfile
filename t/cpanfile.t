@@ -25,7 +25,33 @@ use Test::DZil;
             requires => {
                 'Test::More' => '0.90',
             },
+            recommends => {
+                'Test::TCP' => '0.2',
+            },
         },
+    };
+
+    is_deeply $meta->{optional_features}, {
+        sqlite => {
+            description => 'SQLite support',
+            prereqs => {
+                runtime => {
+                    requires => {
+                        'DBD::SQLite' => 0,
+                    },
+                },
+            },
+        },
+        fastcgi => {
+            description => 'fastcgi',
+            prereqs => {
+                test => {
+                    recommends => {
+                        'Test::FastCGI' => '1',
+                    },
+                },
+            },
+        }
     };
 }
 

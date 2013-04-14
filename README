@@ -11,6 +11,9 @@ DESCRIPTION
     does the opposite of what Dist::Zilla::Plugin::CPANFile does, which is
     to *create* a "cpanfile" using the prereqs collected elsewhere.
 
+    When "feature" DSL is used in "cpanfile", it will correctly be converted
+    to "optional_features" in META data.
+
     DO NOT USE THIS PLUGIN IN COMBINATION WITH Plugin::CPANFile. You will
     probably be complained about creating duplicate files from dzil.
 
