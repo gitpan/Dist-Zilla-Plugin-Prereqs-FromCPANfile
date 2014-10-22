@@ -1,21 +1,23 @@
 package Dist::Zilla::Plugin::Prereqs::FromCPANfile;
 
 use strict;
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 use Module::CPANfile;
 use Try::Tiny;
 use Moose;
 with 'Dist::Zilla::Role::PrereqSource', 'Dist::Zilla::Role::MetaProvider';
 
-sub cpanfile {
+has cpanfile => (is => 'ro', lazy => 1, builder => '_build_cpanfile');
+
+sub _build_cpanfile {
     my $self = shift;
 
     return unless -e 'cpanfile';
 
     try {
         $self->log("Parsing 'cpanfile' to extract prereqs");
-        my $cpanfile = Module::CPANfile->load;
+        Module::CPANfile->load;
     } catch {
         $self->log_fatal($_);
     };
